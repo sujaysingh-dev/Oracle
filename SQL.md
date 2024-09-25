@@ -189,7 +189,7 @@ Update command is used to modify data from exist table.
 ```
 	update <table_name> set col1 = exp1, col2 = exp2,......,n;
 	update Worker set empName = 'Sujay', empNo = '987654321' where empId = 1;
-	update Worker set empAdd = 'Delhi', empGnd = 'Female' where empId = 1 and          empName = 'Sohan';
+	update Worker set empAdd = 'Delhi', empGnd = 'Female' where empId = 1 and empName = 'Sohan';
 ```
 
 Operator :-
@@ -211,19 +211,19 @@ Pattern matching :-
 
 ```
 	Question 
-	1. Retrieve all the rows from table <table_name> whose name start with the            letter'o'?
+	1. Retrieve all the rows from table <table_name> whose name start with the letter'o'?
 	Ans:- select * from <table_name> where name like o%.
 	
 	2. Retrive all the <table_name> whose name end with the letter 'r'?
 	Ans:- select * from <table_name> where name like %r;
 
-	3. Retrive all the rows from table <table_name> whose name start with the             letter 'a' and end with the letter 'h'?
+	3. Retrive all the rows from table <table_name> whose name start with the letter 'a' and end with the letter 'h'?
 	Ans:- select * from <table_name> where name like 'a%h';
 
-	4. Retrive all the rows from the table <table_name> whose name certain exact          letter five?
+	4. Retrive all the rows from the table <table_name> whose name certain exact letter five?
 	Ans:- select * from <table_name> where name like '_____'
 
-	5. Retrive all the rows from table <table_name> whose name at the 2nd letter         'a'?
+	5. Retrive all the rows from table <table_name> whose name at the 2nd letter 'a'?
 	Ans:- select * from <table_name> where name like '_a%';
 
 	update Worker set empSal = empSal + 5000 where empSal like '_____'
@@ -235,21 +235,21 @@ Logical operator :-
 2. Or
 3. Not
 
-And :- The oracle engine will process all rows in a table and display the result only when all of the             condition are satisfied
+And :- The oracle engine will process all rows in a table and display the result only when all of the condition are satisfied
 ```
-	update ppu set fee = fee - 5000 where course = 'bca' and year = 'III' and          college = 'coc' and fee > 50000;
+	update ppu set fee = fee - 5000 where course = 'bca' and year = 'III' and college = 'coc' and fee > 50000;
 ```
 
 Or : - 
-The oracle engine will process all rows in a table and display the result only where any of the          condition are satisfied.
+The oracle engine will process all rows in a table and display the result only where any of the condition are satisfied.
 ```
 	select * from Worker where empId = 1 or empName = 'sohan';
 ```
 
 Not operator :- 
-The oracle engine will process all row in a table display and display the result only             those records do not satisfy the in operator in used.
+The oracle engine will process all row in a table display and display the result only those records do not satisfy the in operator in used.
 ```
-	select * from Worker where not (empId = 1 or empName = 'sohan' or empSal =         20000);
+	select * from Worker where not (empId = 1 or empName = 'sohan' or empSal =  20000);
 ```
 
 Between operator :-
@@ -262,7 +262,7 @@ In order to select data that is within a range of value the between operator is 
  ```
 
 In operator :- 
-The relational operator = compare a single value to another value. in case value need to compare to a list of value the in operator is used. the in operator help reduce the need to use ==.  'or' and 'equal'  .== operator.
+The relational operator = compare a single value to another value. in case value need to compare to a list of value the in operator is used. the in operator help reduce the need to use 'or' and 'equal' operator.
 
 ```
 	select * from Worker where empId = 1;
@@ -289,7 +289,7 @@ Other than the above clauses there are two other clauses which facility retrieve
 
 The group by clause is another section is the select statement this optional clause details oracle to group rows based on distinct value that exist for 	specified column.
 ```
-	select col1,............,coln, groupfunction(argument) from tablename where        condition group by col1,.......,coln;
+	select col1,............,coln, groupfunction(argument) from tablename where condition group by col1,.......,coln;
 
 	select sum(empSal) from Worker;
 	select sum(empSal) from Worker where dep = 'manager';
