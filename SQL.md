@@ -1,3 +1,6 @@
+This note is created by sujay singh 
+-----------------------------------------------------------
+
 Command for create new database :-
 ```
 	Create user <user_name> identified by <password>;
