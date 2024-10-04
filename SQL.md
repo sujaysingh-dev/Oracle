@@ -302,3 +302,53 @@ The group by clause is another section is the select statement this optional cla
 	select depno, count(empNo), sum(sal) from worker group by depno;
 ```
 
+
+
+Unique constraint
+1.  Unique key will not allow duplicates values, unique key allow null values.
+2.  A table can have more than one unique key which is not possible in primary key.
+3.  Unique index is created automatically if there is unique key.
+```
+	Column lavel :- 
+	create table student
+	(
+		Roll    number(5),
+		Name    varchar(20),
+		Phone   number(10) unique,
+		Regno   number(10) unique
+	);
+```
+
+```
+	Tabel label
+	create table student
+	(
+		Roll    number(5),
+		Name    varchar(20),
+		Phone   varchar(10),
+		Regno   number(10),
+		unique(Phone, Regno)
+	);
+```
+
+Not null constraint : -
+When a column is define has not null then that columns becomes a mandatory column. then not null column constraint insure that a table column can not be left blank.
+```
+	create table student
+	(
+		Roll    number(5) primary key,
+		Name    varchar(20) not null,
+		Phone   varchar(10) unique,
+		Fee     number(5) not null,
+		DoB     date not null,
+		Add     varchar(100) not null
+	);
+	create table employee
+	(
+		Empno     number(5) not null,
+		Name      varchar(20) not null,
+		Salary    number(5) not null,
+		number    number(10)
+	);
+```
+
