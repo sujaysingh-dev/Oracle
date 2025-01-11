@@ -33,7 +33,7 @@ Create table in Employee database :-
 		empGnd   varchar(10),
 		empDob   date,
 		empSal   int,
-		empAdd   varchar,
+		empAdd   varchar
 	)
 ```
 
